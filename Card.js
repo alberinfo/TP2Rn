@@ -3,7 +3,7 @@ import { StyleSheet, Image, Text, View } from "react-native";
 export default function CardJS({imageUrl, Description}) {
     return (
         <View style={styles.container}>
-            <Image style={styles.image} source={{uri: imageUrl}}/>
+            <Image style={styles.image} source={imageUrl}/>
             <Text style={styles.desc}>{Description}</Text>
         </View>
     );
@@ -19,10 +19,12 @@ const styles = StyleSheet.create({
     },
     image: {
         width: "100%",
-        height: "85%"
+        height: "85%",
+        borderTopLeftRadius: "20px",
+        borderTopRightRadius: "20px"
     },
     desc: {
-        marginTop: "5px",
+        marginTop: "5pt",
         color: "white",
         fontWeight: "bold"
     }

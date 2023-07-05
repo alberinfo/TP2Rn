@@ -8,8 +8,8 @@ export default function App() {
       <View style={styles.container}>
         <Image style={styles.logo} source={require('./imgs/central_perk_logo.jpeg')}/>
         <View style={{height: "100%", alignContent: "center"}}>
-          <Text>Try some of our most popular flavours!</Text>
-          <CardJS imageUrl="https://images.immediate.co.uk/production/volatile/sites/30/2020/08/flat-white-3402c4f.jpg" Description="LMAO"></CardJS>
+          <Text style={styles.presentText}>Try some of our most popular flavours!</Text>
+          <CardJS imageUrl={require("./imgs/coffee1.jpeg")} Description="LMAO"></CardJS>
         </View>
       </View>
 
@@ -23,10 +23,15 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: '#fff',
     alignItems: 'center',
-    justifyContent: 'flex-start',
+    justifyContent: 'flex-start'
   },
   logo: {
     width: "80%",
-    height: "25%"
+    height: "25%",
+    resizeMode:'contain'
+  },
+  presentText: {
+    fontSize: "18px",
+    fontWeight: "bold"
   },
 });
